@@ -41,12 +41,39 @@
       <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
     </section>
 
-  <!-- Like Section -->
-  <section id="like" class="section">
-    <h1>Give Me a Like!</h1>
-    <button id="likeButton">Like</button>
-    <span id="likeCount">0</span>
-  </section>
+
+<!-- Like Section -->
+<section id="like" class="section">
+  <h1>Give Me a Like!</h1>
+  <button id="likeButton">Like</button>
+</section>
+
+<!-- JavaScript for Like Counter -->
+<script>
+    var likeButton = document.getElementById("likeButton");
+
+    // Check if the user has previously liked
+    var liked = localStorage.getItem('liked');
+    if (liked === 'true') {
+        likeButton.textContent = "Liked";
+        likeButton.classList.add("liked");
+    }
+
+    likeButton.addEventListener("click", function() {
+        if (likeButton.textContent === "Like") {
+            likeButton.textContent = "Liked";
+            likeButton.classList.add("liked");
+            // Store the like status in localStorage
+            localStorage.setItem('liked', 'true');
+        } else {
+            likeButton.textContent = "Like";
+            likeButton.classList.remove("liked");
+            // Remove the like status from localStorage
+            localStorage.removeItem('liked');
+        }
+    });
+</script>
+
 
   <!-- QR Code Section -->
   <section id="qrcoder" class="section">
@@ -135,23 +162,9 @@
   });
 </script>
 
-  <script>
-    // Retrieve like count from local storage or set to 0 if not present
-    var count = localStorage.getItem('likeCount') || 0;
-    var likeCount = document.getElementById("likeCount");
-    likeCount.textContent = count;
 
-    var likeButton = document.getElementById("likeButton");
 
-    likeButton.addEventListener("click", function() {
-        // Increment the count
-        count++;
-        // Update the like count display
-        likeCount.textContent = count;
-        // Store the updated count in local storage
-        localStorage.setItem('likeCount', count);
-    });
-</script>
+
 
 
 

@@ -59,7 +59,7 @@ body {
 
 /* Custom styles for the like button */
 #likeButton {
-    background-color: #4CAF50; /* Green background */
+    background-color: #d40c02; /* Red background */
     border: none;
     color: white;
     padding: 10px 20px; /* Larger padding */
@@ -71,6 +71,13 @@ body {
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition on hover */
 }
-#likeButton:hover {
-    background-color: #99e69d; /* Darker green background on hover */
+#likeButton:hover,
+#likeButton.liked:hover {
+    background-color: #ff7f78; /* Darker red background on hover */
+}
+
+/* Adjust specificity of .liked class */
+#likeButton.liked {
+    background-color: #4CAF50; /* Green background when liked */
+    color: white; /* Text color for contrast */
 }
