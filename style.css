@@ -22,3 +22,22 @@
 #menu a:hover {
     color: #ffffff; /* Darker gray text color on hover */
 }
+
+/* Custom styles for the like button */
+#likeButton {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Larger padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+#likeButton:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
