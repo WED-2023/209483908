@@ -141,8 +141,8 @@
 
  <!-- JavaScript for Like Button -->
 <script>
-    // Emojis for fireworks and poop
-    const fireworksEmoji = '❤️'; // Single emoji for fireworks
+    // Emojis for heart and poop
+    const heartEmoji = '❤️'; // Single emoji for heart
     const poopEmoji = '💩'; // Single emoji for poop
 
     // Function to create particles
@@ -165,7 +165,7 @@
         if (likeButton.textContent === 'Like') {
             likeButton.textContent = 'Liked';
             likeButton.classList.add('liked');
-            createParticle('fireworks', fireworksEmoji);
+            createParticle('heart', heartEmoji);
             localStorage.setItem('liked', 'true');
         } else {
             likeButton.textContent = 'Like';

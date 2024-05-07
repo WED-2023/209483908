@@ -82,9 +82,9 @@ body {
     color: white !important; /* Text color for contrast */
 }
 
-
-/* Keyframes for fireworks animation */
-    @keyframes fireworks {
+/* animation for like button */
+/* Keyframes for heart animation */
+    @keyframes heart {
         0% { opacity: 0; transform: translateY(0); }
         100% { opacity: 1; transform: translateY(-100vh) rotate(720deg); }
     }
@@ -95,15 +95,15 @@ body {
         100% { opacity: 1; transform: translateY(100vh); }
     }
 
-    /* Style for fireworks particle */
-    .particle.fireworks {
+    /* Style for heart particle */
+    .particle.heart {
         position: fixed;
         top: 100%;
         left: 50%;
-        width: 100px; /* Adjust size of emoji */
-        height: 100px; /* Adjust size of emoji */
-        font-size: 100px; /* Adjust size of emoji */
-        animation-name: fireworks;
+        width: 200px; /* Adjust size of emoji */
+        height: 200px; /* Adjust size of emoji */
+        font-size: 200px; /* Adjust size of emoji */
+        animation-name: heart;
         animation-duration: 5s; /* Adjust duration for slower animation */
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -114,9 +114,9 @@ body {
         position: fixed;
         top: 0;
         left: 50%;
-        width: 100px; /* Adjust size of emoji */
-        height: 100px; /* Adjust size of emoji */
-        font-size: 100px; /* Adjust size of emoji */
+        width: 200px; /* Adjust size of emoji */
+        height: 200px; /* Adjust size of emoji */
+        font-size: 200px; /* Adjust size of emoji */
         animation-name: poop;
         animation-duration: 5s; /* Adjust duration for slower animation */
         animation-timing-function: ease-in-out;
