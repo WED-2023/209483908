@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>The best person</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="rJkbDi4t"></script>
+
   <div id="menu">
     <a href="#about">About Me</a>
     <a href="#photos">My Photos</a>
@@ -12,114 +16,133 @@
     <a href="#qrcoder">QR code</a>
     <a href="#spa">Q&A</a>
     <a href="#contact">Contact Me</a>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
+  </div>
+        
+  <section id="about" class="section">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  about me
+  <br/>
+  <br/>
+  <br/>
+  </section>
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+  <section id="photos" class="section">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  my photos
+  <br/>
+  <br/>
+  <br/>
+  </section>
 
-<section id="playlist" class="section">
-  my playlist
-<iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
-</section>
+  <section id="playlist" class="section">
+    my playlist
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-<section id="like" class="section">
-<br/>
-<br/>
+  <section id="like" class="section">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  give me a like
+  <br/>
+  <br/>
+  <button id="likeButton">Like</button>
+  <span id="likeCount">0</span>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  </section>
 
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
+  <section id="qrcoder" class="section">
+  <h1>scan my code</h1>
+  <br/>
+  <img src="pictures/qrcode.png" alt="qrcode">
+  </section>
 
-<section id="qrcoder" class="section">
-<h1>scan my code</h1>
-<br/>
-<img src="pictures/qrcode.png" alt="Description of the image">
-</section>
-
-<section id="spa" class="section">
-<body>
-  <h1>:web1 web2 web3 שלושה הבדלים עיקריים בין </h1>
-  <h3>הבדל ראשון - אינטרקציית המשתמש עם הרשת  </h3>
-  <h4>web1</h4>
-  <p>אתרי האינטרנט היו סטטיים, המשתמשים יכלו רק לקרוא את התוכן</p>  
-  <h4>web2</h4>
-  <p>אתרי האינטרנט נהיו דינמיים, המשתמשים יכלו לכתוב תוכן ולהשאיר תגובות לתוכן קיים בנוסף לאופצית הקריאה שהייתה קודם</p>
-  <h4>web3</h4>
-  <p>אתרי האינטרנט נהיו חכמים, המשתמשים יכולים לכתוב תוכן, להשאיר תגובות,
-      ובנוסף אתרי האינטרנט יכלו להתאים את התוכן שלהם למשתמשים בעזרת טכנולוגיות שונות של בינה מלאכותית ועוד</p>
-</body>
-<br/>
-<br/>
-</section>
-<section id="contact" class="section" style="width: 800px; height: 450px;">
-  <h2>Contact Me</h2>
-    <form id="contactForm" style="width: 100%; height: 100%;">
-        <div>
-            <label for="senderEmail">Your Email:</label><br>
-            <input type="email" id="senderEmail" name="senderEmail" required><br>
-        </div>
-        <div>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required style="width: 100%; height: 100%;"></textarea><br>
-        </div>
-        <div>
-            <label for="emoji">Choose an Emoji:</label><br>
-            <select id="emoji" name="emoji">
-              <option value="😊">😊</option>
-              <option value="😎">😎</option>
-              <option value="👍">👍</option>
-              <option value="❤️">❤️</option>
-              <option value="😂">😂</option>
-              <option value="😍">😍</option>
-              <option value="😜">😜</option>
-              <option value="😇">😇</option>
-              <option value="🙌">🙌</option>
-              <option value="💪">💪</option>
-            </select><br>
-        </div>
-        <button type="button" onclick="sendEmail()">Send</button>
-    </form>
-</section>
+  <section id="spa" class="section">
+  <body>
+    <h1>:web1 web2 web3 שלושה הבדלים עיקריים בין </h1>
+    <h3>הבדל ראשון - אינטרקציית המשתמש עם הרשת  </h3>
+    <h4>web1</h4>
+    <p>אתרי האינטרנט היו סטטיים, המשתמשים יכלו רק לקרוא את התוכן</p>  
+    <h4>web2</h4>
+    <p>אתרי האינטרנט נהיו דינמיים, המשתמשים יכלו לכתוב תוכן ולהשאיר תגובות לתוכן קיים בנוסף לאופצית הקריאה שהייתה קודם</p>
+    <h4>web3</h4>
+    <p>אתרי האינטרנט נהיו חכמים, המשתמשים יכולים לכתוב תוכן, להשאיר תגובות,
+        ובנוסף אתרי האינטרנט יכלו להתאים את התוכן שלהם למשתמשים בעזרת טכנולוגיות שונות של בינה מלאכותית ועוד</p>
+  </body>
 
 
+  </section>
+  <section id="contact" class="section" style="width: 800px; height: 450px;">
+    <h2>Contact Me</h2>
+      <form id="contactForm" style="width: 100%; height: 100%;">
+          <div>
+              <label for="senderEmail">Your Email:</label><br>
+              <input type="email" id="senderEmail" name="senderEmail" required><br>
+          </div>
+          <div>
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message" rows="4" required style="width: 100%; height: 100%;"></textarea><br>
+          </div>
+          <div>
+              <label for="emoji">Choose an Emoji:</label><br>
+              <select id="emoji" name="emoji">
+                <option value="😊">😊</option>
+                <option value="😎">😎</option>
+                <option value="👍">👍</option>
+                <option value="❤️">❤️</option>
+                <option value="😂">😂</option>
+                <option value="😍">😍</option>
+                <option value="😜">😜</option>
+                <option value="😇">😇</option>
+                <option value="🙌">🙌</option>
+                <option value="💪">💪</option>
+              </select><br>
+          </div>
+          <button type="button" onclick="sendEmail()">Send</button>
+      </form>
+  </section>
 
+  <script>
+    // Retrieve like count from local storage or set to 0 if not present
+    var count = localStorage.getItem('likeCount') || 0;
+    var likeCount = document.getElementById("likeCount");
+    likeCount.textContent = count;
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
+    var likeButton = document.getElementById("likeButton");
+
+    likeButton.addEventListener("click", function() {
+        // Increment the count
+        count++;
+        // Update the like count display
+        likeCount.textContent = count;
+        // Store the updated count in local storage
+        localStorage.setItem('likeCount', count);
+    });
 </script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+
+  <script type="text/javascript">
+  $(function(){
+    $("#nav a").click(function(e){
+      e.preventDefault();
+      $('html,body').scrollTo(this.hash,this.hash); 
+    });
+  });
+  </script>
+  <script type="text/javascript">
+  $(document).scroll(function() {
+      $('#menu').toggle($(this).scrollTop()>1000)
+  });​
+  </script>
 </body>
 </html>
