@@ -9,7 +9,6 @@
     display: flex; /* Use flexbox for layout - it will show them horizontally and not bertically */
     justify-content: space-around; /* Evenly distribute menu items horizontally */
 }
-
 /* Styles for the menu links */
 #menu a {
     color: #000000; /* Dark gray text color */
@@ -17,11 +16,18 @@
     padding: 15px 20px; /* Add padding around the text for better clickability */
     transition: color 0.4s ease; /* Smooth transition for color change */
 }
-
 /* Styles for the menu links on hover */
 #menu a:hover {
     color: #ffffff; /* Darker gray text color on hover */
 }
+
+
+/* Styles for the section */
+.section {
+    text-align: center; /* Center-align the content */
+    padding: 50px 0; /* Add vertical padding to create space around the content */
+}
+
 
 /* Custom styles for the like button */
 #likeButton {
@@ -37,7 +43,7 @@
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition on hover */
 }
-
 #likeButton:hover {
     background-color: #45a049; /* Darker green background on hover */
 }
+
