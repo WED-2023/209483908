@@ -5,9 +5,6 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="rJkbDi4t"></script>
-
   <div id="menu">
     <a href="#about">About Me</a>
     <a href="#photos">My Photos</a>
@@ -18,73 +15,43 @@
     <a href="#contact">Contact Me</a>
   </div>
         
-  <section id="about" class="section">
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  about me
-  <br/>
-  <br/>
-  <br/>
+    <!-- About Me Section -->
+    <section id="about" class="section">
+      <h1>About Me</h1>
+      <p>Information about me goes here...</p>
+    </section>
+
+   <!-- My Photos Section -->
+   <section id="photos" class="section">
+    <h1>My Photos</h1>
+    <div class="gallery">
+      <div class="image"><img src="pictures/display/1.jpeg"></div>
+      <div class="image"><img src="pictures/display/2.jpeg"></div>
+      <div class="image"><img src="pictures/display/3.jpeg"></div>
+      <div class="image"><img src="pictures/display/4.jpeg"></div>
+      <div class="image"><img src="pictures/display/5.jpeg"></div>
+      <div class="image"><img src="pictures/display/6.jpeg"></div>
+      <div class="image"><img src="pictures/display/7.jpeg"></div>
+    </div>
   </section>
 
-  <section id="photos" class="section">
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  my photos
-  <br/>
-  <div class="gallery">
-    <div class="image">
-        <img src="pictures/display/1.jpeg" alt="Image 1">
-    </div>
-    <div class="image">
-        <img src="pictures/display/2.jpeg" alt="Image 2">
-    </div>
-    <div class="image">
-        <img src="pictures/display/3.jpeg" alt="Image 3">
-    </div>
-    <div class="image">
-        <img src="pictures/display/4.jpeg" alt="Image 1">
-    </div>
-    <div class="image">
-        <img src="pictures/display/5.jpeg" alt="Image 2">
-    </div>
-    <div class="image">
-        <img src="pictures/display/6.jpeg" alt="Image 3">
-    </div>
-    <div class="image">
-      <img src="pictures/display/7.jpeg" alt="Image 3">
-  </div>
-    <!-- Add more images as needed -->
-</div>
-  <br/>
-  <br/>
-  </section>
+    <!-- My Playlist Section -->
+    <section id="playlist" class="section">
+      <h1>My Playlist</h1>
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
+    </section>
 
-  <section id="playlist" class="section">
-    my playlist (or actually my favorite song!)
-    <br/>
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
-    <br/>
-  </section>
-
+  <!-- Like Section -->
   <section id="like" class="section">
-  <h1> give me a like!</h1>
-  <button id="likeButton">Like</button>
-  <span id="likeCount">0</span>
-  <br/>
+    <h1>Give Me a Like!</h1>
+    <button id="likeButton">Like</button>
+    <span id="likeCount">0</span>
   </section>
 
+  <!-- QR Code Section -->
   <section id="qrcoder" class="section">
-    <div class="header-wrapper">
-      <div class="color-bar"></div>
-      <h2>Scan My Code Here:</h2>
-      <div class="color-bar"></div>
-  </div>
-  <img src="pictures/qrcode.png" alt="qrcode">
+    <h1>Scan My QR Code Here:</h1>
+    <img src="pictures/qrcode.png" alt="QR code image">
   </section>
 
   <section id="spa" class="section">
