@@ -1,33 +1,84 @@
 /* Styles for the menu container */
 #menu {
-    position: fixed; /* Fixed position so it stays at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Full width of the viewport */
-    height: 50px; /* Set the height of the menu */
-    background: #f8c3c3; /* Light gray background */
-    display: flex; /* Use flexbox for layout - it will show them horizontally and not bertically */
-    justify-content: space-around; /* Evenly distribute menu items horizontally */
+    width: 100%;
+    height: 50px;
+    background: #f8c3c3;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000; /* Ensure the menu is above other elements */
 }
+
+/* Add a margin to the top of the content to account for the fixed menu */
+body {
+    margin-top: 50px; /* Adjust this value to match the height of your menu */
+}
+
 /* Styles for the menu links */
 #menu a {
     color: #000000; /* Dark gray text color */
     text-decoration: none; /* Remove default underline */
     padding: 15px 20px; /* Add padding around the text for better clickability */
     transition: color 0.4s ease; /* Smooth transition for color change */
+    flex-grow: 1; /* Equal spacing between menu links */
 }
+
 /* Styles for the menu links on hover */
 #menu a:hover {
     color: #ffffff; /* Darker gray text color on hover */
 }
 
+/* Increase the z-index of the YouTube video container */
+#playlist {
+    position: relative;
+    z-index: 1; /* Ensure the YouTube video is below the menu */
+}
 
 /* Styles for the section */
 .section {
     text-align: center; /* Center-align the content */
-    padding: 50px 0; /* Add vertical padding to create space around the content */
+    padding: 70px 0; /* Add vertical padding to create space around the content */
 }
 
+/* Styles for the gallery container */
+#gallery {
+    max-height: calc(100vh - 50px); /* Set max height to fill remaining viewport space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    padding-top: 20px; /* Add extra padding to the top to avoid overlap with the menu */
+}
+
+/* Styles for individual images */
+.image {
+    margin-right: 10px; /* Add space between images */
+    display: inline-block; /* Display images inline */
+    vertical-align: top; /* Align images to the top */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Apply grow effect to images on hover */
+.image:hover {
+    transform: scale(1.5); /* Increase size by 50% on hover */
+}
+
+/* Apply fade-in effect to images */
+.image img {
+    opacity: 0; /* Initially hide images */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Fade-in effect when images enter the viewport */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply fade-in effect to images when they enter the viewport */
+.image img {
+    animation: fadeIn 0.5s ease forwards;
+}
 
 /* Custom styles for the like button */
 #likeButton {
@@ -46,4 +97,3 @@
 #likeButton:hover {
     background-color: #45a049; /* Darker green background on hover */
 }
-
