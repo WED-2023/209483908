@@ -42,38 +42,11 @@
     </section>
 
 
-<!-- Like Section -->
-<section id="like" class="section">
-  <h1>Give Me a Like!</h1>
-  <button id="likeButton">Like</button>
-</section>
-
-<!-- JavaScript for Like Counter -->
-<script>
-    var likeButton = document.getElementById("likeButton");
-
-    // Check if the user has previously liked
-    var liked = localStorage.getItem('liked');
-    if (liked === 'true') {
-        likeButton.textContent = "Liked";
-        likeButton.classList.add("liked");
-    }
-
-    likeButton.addEventListener("click", function() {
-        if (likeButton.textContent === "Like") {
-            likeButton.textContent = "Liked";
-            likeButton.classList.add("liked");
-            // Store the like status in localStorage
-            localStorage.setItem('liked', 'true');
-        } else {
-            likeButton.textContent = "Like";
-            likeButton.classList.remove("liked");
-            // Remove the like status from localStorage
-            localStorage.removeItem('liked');
-        }
-    });
-</script>
-
+  <!-- Like Section -->
+  <section id="like" class="section">
+    <h1>Give Me a Like!</h1>
+    <button id="likeButton">Like</button>
+  </section>
 
   <!-- QR Code Section -->
   <section id="qrcoder" class="section">
@@ -164,34 +137,56 @@
 
 
 
+  <!-- JavaScript for Like Counter -->
+  <script>
+    var likeButton = document.getElementById("likeButton");
+
+    // Check if the user has previously liked
+    var liked = localStorage.getItem('liked');
+    if (liked === 'true') {
+        likeButton.textContent = "Liked";
+        likeButton.classList.add("liked");
+    }
+
+    likeButton.addEventListener("click", function() {
+        if (likeButton.textContent === "Like") {
+            likeButton.textContent = "Liked";
+            likeButton.classList.add("liked");
+            // Store the like status in localStorage
+            localStorage.setItem('liked', 'true');
+        } else {
+            likeButton.textContent = "Like";
+            likeButton.classList.remove("liked");
+            // Remove the like status from localStorage
+            localStorage.removeItem('liked');
+        }
+    });
+  </script>
+
+  <!-- Include jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
+  <!-- JavaScript for Gallery Images -->
+  <script>
+    $(document).ready(function () {
+        // Function to toggle fullscreen mode
+        function toggleFullScreen(element) {
+            if (!document.fullscreenElement) {
+                element.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
 
-
-<!-- Include jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-<!-- JavaScript for Gallery Images -->
-<script>
-  $(document).ready(function () {
-      // Function to toggle fullscreen mode
-      function toggleFullScreen(element) {
-          if (!document.fullscreenElement) {
-              element.requestFullscreen().catch(err => {
-                  console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-              });
-          } else {
-              document.exitFullscreen();
-          }
-      }
-
-      // Attach click event listener to each image
-      $('.image img').click(function () {
-          toggleFullScreen(this);
-      });
-  });
-</script>
+        // Attach click event listener to each image
+        $('.image img').click(function () {
+            toggleFullScreen(this);
+        });
+    });
+  </script>
 
 
 
