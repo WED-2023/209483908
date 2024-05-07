@@ -30,25 +30,12 @@ body {
     color: #ffffff; /* Darker gray text color on hover */
 }
 
-/* Increase the z-index of the YouTube video container */
-#playlist {
-    position: relative;
-    z-index: 1; /* Ensure the YouTube video is below the menu */
-}
-
 /* Styles for the section */
 .section {
     text-align: center; /* Center-align the content */
     padding: 70px 0; /* Add vertical padding to create space around the content */
 }
 
-/* Styles for the gallery container */
-#gallery {
-    max-height: calc(100vh - 50px); /* Set max height to fill remaining viewport space */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    padding-top: 20px; /* Add extra padding to the top to avoid overlap with the menu */
-}
 
 /* Styles for individual images */
 .image {
@@ -65,20 +52,10 @@ body {
 
 /* Apply fade-in effect to images */
 .image img {
-    opacity: 0; /* Initially hide images */
     transition: opacity 0.5s ease; /* Smooth transition for opacity */
-}
-
-/* Fade-in effect when images enter the viewport */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Apply fade-in effect to images when they enter the viewport */
-.image img {
     animation: fadeIn 0.5s ease forwards;
 }
+
 
 /* Custom styles for the like button */
 #likeButton {
@@ -95,5 +72,5 @@ body {
     transition: background-color 0.3s; /* Smooth transition on hover */
 }
 #likeButton:hover {
-    background-color: #45a049; /* Darker green background on hover */
+    background-color: #99e69d; /* Darker green background on hover */
 }
