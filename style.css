@@ -6,19 +6,16 @@
     width: 100%; /* Full width of the viewport */
     height: 50px; /* Set the height of the menu */
     background: #f8c3c3; /* Light gray background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    display: flex; /* Use flexbox for layout */
+    display: flex; /* Use flexbox for layout - it will show them horizontally and not bertically */
     justify-content: space-around; /* Evenly distribute menu items horizontally */
-    align-items: center; /* Center-align menu items vertically */
 }
 
 /* Styles for the menu links */
 #menu a {
-    display: block; /* Display as block to fill the entire width of the container */
     color: #000000; /* Dark gray text color */
     text-decoration: none; /* Remove default underline */
     padding: 15px 20px; /* Add padding around the text for better clickability */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    transition: color 0.4s ease; /* Smooth transition for color change */
 }
 
 /* Styles for the menu links on hover */
