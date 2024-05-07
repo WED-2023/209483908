@@ -139,31 +139,65 @@
 
 
 
-  <!-- JavaScript for Like Counter -->
-  <script>
-    var likeButton = document.getElementById("likeButton");
+ <!-- JavaScript for Like Button -->
+<script>
+    // Emojis for fireworks and poop
+    const fireworksEmoji = '❤️'; // Single emoji for fireworks
+    const poopEmoji = '💩'; // Single emoji for poop
 
-    // Check if the user has previously liked
-    var liked = localStorage.getItem('liked');
-    if (liked === 'true') {
-        likeButton.textContent = "Liked";
-        likeButton.classList.add("liked");
+    // Function to create particles
+    function createParticle(className, emoji) {
+        const particle = document.createElement('div');
+        particle.textContent = emoji; // Use the provided emoji
+        particle.classList.add('particle', className);
+        document.body.appendChild(particle);
+
+        // Remove particle after animation
+        setTimeout(() => {
+            particle.remove();
+        }, 5000); // Adjust duration of animation
     }
 
-    likeButton.addEventListener("click", function() {
-        if (likeButton.textContent === "Like") {
-            likeButton.textContent = "Liked";
-            likeButton.classList.add("liked");
-            // Store the like status in localStorage
+    // Event listener for toggling like and liked
+    document.getElementById('likeButton').addEventListener('click', function () {
+        const likeButton = this;
+
+        if (likeButton.textContent === 'Like') {
+            likeButton.textContent = 'Liked';
+            likeButton.classList.add('liked');
+            createParticle('fireworks', fireworksEmoji);
             localStorage.setItem('liked', 'true');
         } else {
-            likeButton.textContent = "Like";
-            likeButton.classList.remove("liked");
-            // Remove the like status from localStorage
+            likeButton.textContent = 'Like';
+            likeButton.classList.remove('liked');
+            createParticle('poop', poopEmoji);
             localStorage.removeItem('liked');
         }
     });
-  </script>
+
+    // Check if the user has previously liked
+    const liked = localStorage.getItem('liked');
+    if (liked === 'true') {
+        const likeButton = document.getElementById('likeButton');
+        likeButton.textContent = 'Liked';
+        likeButton.classList.add('liked');
+    }
+</script>
+
+  // Event listener for toggling like and liked
+  document.getElementById('likeButton').addEventListener('click', function() {
+      const likeButton = document.getElementById('likeButton');
+      if (likeButton.textContent === 'Like') {
+          likeButton.textContent = 'Liked';
+          createParticles('fireworks', fireworksEmojis);
+      } else {
+          likeButton.textContent = 'Like';
+          createParticles('poop', poopEmojis);
+      }
+  });
+</script>
+
+
 
   <!-- Include jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -189,6 +223,8 @@
         });
     });
   </script>
+
+
 
 
 

@@ -78,6 +78,47 @@ body {
 
 /* Adjust specificity of .liked class */
 #likeButton.liked {
-    background-color: #4CAF50; /* Green background when liked */
-    color: white; /* Text color for contrast */
+    background-color: #4CAF50 !important; /* Green background when liked */
+    color: white !important; /* Text color for contrast */
 }
+
+
+/* Keyframes for fireworks animation */
+    @keyframes fireworks {
+        0% { opacity: 0; transform: translateY(0); }
+        100% { opacity: 1; transform: translateY(-100vh) rotate(720deg); }
+    }
+
+    /* Keyframes for poop animation */
+    @keyframes poop {
+        0% { opacity: 0; transform: translateY(0); }
+        100% { opacity: 1; transform: translateY(100vh); }
+    }
+
+    /* Style for fireworks particle */
+    .particle.fireworks {
+        position: fixed;
+        top: 100%;
+        left: 50%;
+        width: 100px; /* Adjust size of emoji */
+        height: 100px; /* Adjust size of emoji */
+        font-size: 100px; /* Adjust size of emoji */
+        animation-name: fireworks;
+        animation-duration: 5s; /* Adjust duration for slower animation */
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    /* Style for poop particle */
+    .particle.poop {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 100px; /* Adjust size of emoji */
+        height: 100px; /* Adjust size of emoji */
+        font-size: 100px; /* Adjust size of emoji */
+        animation-name: poop;
+        animation-duration: 5s; /* Adjust duration for slower animation */
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
