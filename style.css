@@ -36,6 +36,35 @@ body {
     padding: 70px 0; /* Add vertical padding to create space around the content */
 }
 
+/* Styles for the lines on the sides of h1 */
+.section h1 {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    color: black; /* Set the color of the text */
+  }
+  
+  .section h1::before,
+  .section h1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px; /* Adjust the width of the lines */
+    height: 3px; /* Adjust the height of the lines */
+    background-color: #f8c3c3; /* Adjust the color of the lines */
+  }
+  
+  .section h1::before {
+    left: -70px; /* Adjust the position of the left line */
+    transform: translateY(-50%);
+  }
+  
+  .section h1::after {
+    right: -70px; /* Adjust the position of the right line */
+    transform: translateY(-50%);
+  }
+  
+
 
 /* Styles for individual images */
 .image {
@@ -65,12 +94,14 @@ body {
     padding: 10px 20px; /* Larger padding */
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block; /* Change to block to take full width */
+    margin: 20px auto; /* Add margin for spacing */
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition on hover */
 }
+
 #likeButton:hover,
 #likeButton.liked:hover {
     background-color: #ff7f78; /* Darker red background on hover */
@@ -81,7 +112,6 @@ body {
     background-color: #4CAF50 !important; /* Green background when liked */
     color: white !important; /* Text color for contrast */
 }
-
 /* animation for like button */
 /* Keyframes for heart animation */
     @keyframes heart {
