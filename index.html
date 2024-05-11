@@ -78,6 +78,7 @@
   <br/>
   <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
 </section>
+
 <!-- Like Section -->
 <section id="like" class="section">
   <div class="like-content">
@@ -133,40 +134,53 @@
 </section>
 
   
+<!-- Contact Me Section -->
 <section id="contact" class="contact-section">
+  <!-- Title of the Contact Section -->
   <h2>Contact Me</h2>
+
+  <!-- Contact Form with various input fields and actions -->
   <form id="contactForm" class="contact-form">
-      <div class="form-group">
-          <label for="senderEmail">Your Email:</label>
-          <input type="email" id="senderEmail" name="senderEmail" required>
-      </div>
-      <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-      <div class="form-group">
-          <label for="emoji">Choose an Emoji:</label>
-          <select id="emoji" name="emoji">
-            <option value="" selected disabled>Select Emoji</option> 
-            <option value="💩">💩</option>
-            <option value="😊">😊</option>
-            <option value="😎">😎</option>
-            <option value="👍">👍</option>
-            <option value="❤️">❤️</option>
-            <option value="😂">😂</option>
-            <option value="😍">😍</option>
-            <option value="😜">😜</option>
-            <option value="😇">😇</option>
-            <option value="🙌">🙌</option>
-            <option value="💪">💪</option>
-          </select>
-      </div>
-      <div class="button-group">
-          <button type="button" onclick="sendEmail()">Send</button>
-          <button type="button" onclick="clearForm()">Clear</button>
-      </div>
+    
+    <!-- Form Group for Email Input: Collects user's email address -->
+    <div class="form-group">
+      <label for="senderEmail">Your Email:</label>
+      <input type="email" id="senderEmail" name="senderEmail" required>
+    </div>
+    
+    <!-- Form Group for Message Textarea: Allows users to type a detailed message -->
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    
+    <!-- Form Group for Emoji Selection: Provides a dropdown to choose an emoji -->
+    <div class="form-group">
+      <label for="emoji">Choose an Emoji:</label>
+      <select id="emoji" name="emoji">
+        <option value="" selected disabled>Select Emoji</option> 
+        <option value="💩">💩</option>
+        <option value="😊">😊</option>
+        <option value="😎">😎</option>
+        <option value="👍">👍</option>
+        <option value="❤️">❤️</option>
+        <option value="😂">😂</option>
+        <option value="😍">😍</option>
+        <option value="😜">😜</option>
+        <option value="😇">😇</option>
+        <option value="🙌">🙌</option>
+        <option value="💪">💪</option>
+      </select>
+    </div>
+    
+    <!-- Button Group for Form Actions: Contains buttons for sending and clearing the form -->
+    <div class="button-group">
+      <button type="button" onclick="sendEmail()">Send</button> <!-- Button to send the form data -->
+      <button type="button" onclick="clearForm()">Clear</button> <!-- Button to clear the form fields -->
+    </div>
   </form>
 </section>
+
 
 
  <!-- send email script -->
@@ -297,8 +311,5 @@
       $('#menu').toggle($(this).scrollTop()>1000)
   });​
   </script>
-
-
-
 </body>
 </html>
