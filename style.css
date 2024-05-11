@@ -1,3 +1,8 @@
+/* body background */
+body {
+    background-image: url('pictures/background.jpg');
+    /* Additional background properties */
+}
 /* Styles for the menu container */
 #menu {
     position: fixed;
@@ -31,39 +36,18 @@ body {
 }
 
 /* Styles for the section */
+/* Styles for the section */
 .section {
     text-align: center; /* Center-align the content */
     padding: 70px 0; /* Add vertical padding to create space around the content */
+    background-color: #f8c3c3; /* Set the background color to pink */
+    border: 2px solid #000000; /* Add a 2px solid pink border */
+    border-radius: 10px; /* Add rounded corners to the border */
+    max-width: 80%; /* Set maximum width for the section */
+    margin: 0 auto; /* Center the section horizontally */
+    overflow: auto; /* Add scrollbars if content exceeds the maximum height */
 }
 
-/* Styles for the lines on the sides of h1 */
-.section h1 {
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    color: black; /* Set the color of the text */
-  }
-  
-  .section h1::before,
-  .section h1::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 50px; /* Adjust the width of the lines */
-    height: 3px; /* Adjust the height of the lines */
-    background-color: #f8c3c3; /* Adjust the color of the lines */
-  }
-  
-  .section h1::before {
-    left: -70px; /* Adjust the position of the left line */
-    transform: translateY(-50%);
-  }
-  
-  .section h1::after {
-    right: -70px; /* Adjust the position of the right line */
-    transform: translateY(-50%);
-  }
-  
 
 
 /* Styles for individual images */
@@ -74,81 +58,34 @@ body {
     transition: transform 0.3s ease; /* Smooth transition for transform */
 }
 
+img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+
 /* Apply grow effect to images on hover */
 .image:hover {
     transform: scale(1.5); /* Increase size by 50% on hover */
 }
 
-/* Apply fade-in effect to images */
-.image img {
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
-    animation: fadeIn 0.5s ease forwards;
-}
+
 
 
 /* Custom styles for the like button */
 #likeButton {
-    background-color: #d40c02; /* Red background */
+    background-color: #4CAF50; /* Green background */
     border: none;
     color: white;
     padding: 10px 20px; /* Larger padding */
     text-align: center;
     text-decoration: none;
-    display: block; /* Change to block to take full width */
-    margin: 20px auto; /* Add margin for spacing */
+    display: inline-block;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition on hover */
 }
-
-#likeButton:hover,
-#likeButton.liked:hover {
-    background-color: #ff7f78; /* Darker red background on hover */
+#likeButton:hover {
+    background-color: #99e69d; /* Darker green background on hover */
 }
-
-/* Adjust specificity of .liked class */
-#likeButton.liked {
-    background-color: #4CAF50 !important; /* Green background when liked */
-    color: white !important; /* Text color for contrast */
-}
-/* animation for like button */
-/* Keyframes for heart animation */
-    @keyframes heart {
-        0% { opacity: 0; transform: translateY(0); }
-        100% { opacity: 1; transform: translateY(-100vh) rotate(720deg); }
-    }
-
-    /* Keyframes for poop animation */
-    @keyframes poop {
-        0% { opacity: 0; transform: translateY(0); }
-        100% { opacity: 1; transform: translateY(100vh); }
-    }
-
-    /* Style for heart particle */
-    .particle.heart {
-        position: fixed;
-        top: 100%;
-        left: 50%;
-        width: 200px; /* Adjust size of emoji */
-        height: 200px; /* Adjust size of emoji */
-        font-size: 200px; /* Adjust size of emoji */
-        animation-name: heart;
-        animation-duration: 5s; /* Adjust duration for slower animation */
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
-
-    /* Style for poop particle */
-    .particle.poop {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        width: 200px; /* Adjust size of emoji */
-        height: 200px; /* Adjust size of emoji */
-        font-size: 200px; /* Adjust size of emoji */
-        animation-name: poop;
-        animation-duration: 5s; /* Adjust duration for slower animation */
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
