@@ -56,11 +56,11 @@
 </section>
 
 
-    <!-- My Playlist Section -->
-    <section id="playlist" class="section">
-      <h1>My Playlist</h1>
-      <br/>
-      <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
+  <!-- My Playlist Section -->
+  <section id="playlist" class="section">
+    <h1>My Playlist</h1>
+    <br/>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/6xKWiCMKKJg?si=C2JxwU0GnpcLavoF" frameborder="0" allowfullscreen></iframe>
 
   <!-- Like Section -->
   <section id="like" class="section">
@@ -148,6 +148,19 @@
   </form>
 </section>
 
+<script>
+  function sendEmail() {
+      // Get the email and message values
+      const email = document.getElementById('senderEmail').value;
+      const message = document.getElementById('message').value;
+      
+      // Construct the mailto link
+      const mailtoLink = `mailto:${email}?subject=Monkey%20D.%20Garp&body=${encodeURIComponent(message)}`;
+
+      // Open the default email client with the mailto link
+      window.location.href = mailtoLink;
+  }
+</script>
 
 <script>
   // Function to add the selected emoji to the message textarea
@@ -209,7 +222,7 @@
 
 
   <!-- Include jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
   <!-- JavaScript for Gallery Images -->
@@ -235,8 +248,6 @@
 
 
 
-
-
   <script type="text/javascript">
   $(function(){
     $("#nav a").click(function(e){
@@ -250,5 +261,8 @@
       $('#menu').toggle($(this).scrollTop()>1000)
   });​
   </script>
+
+
+
 </body>
 </html>
