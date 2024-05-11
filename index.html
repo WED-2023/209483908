@@ -84,6 +84,7 @@
     <h1>Give Me a Like!</h1>
     <button id="likeButton">Like</button>
   </div>
+
 </section>
 
   <!-- QR Code Section -->
@@ -161,8 +162,12 @@
           </select><br>
       </div>
       <button type="button" onclick="sendEmail()">Send</button>
+      <!-- Reset Button to clear all form fields -->
+      <button type="reset" onclick="clearForm()">Clear</button>
   </form>
 </section>
+
+ <!-- send email script -->
 
 <script>
   function sendEmail() {
@@ -177,6 +182,7 @@
       window.location.href = mailtoLink;
   }
 </script>
+ <!-- add emoji script -->
 
 <script>
   // Function to add the selected emoji to the message textarea
@@ -188,6 +194,20 @@
       messageTextarea.value = updatedMessage; // Update the message textarea
   });
 </script>
+
+ <!-- clear script -->
+<script>
+  function clearForm() {
+    // Access the form elements and explicitly set their values
+    document.getElementById('senderEmail').value = ''; // Clears the email input
+    document.getElementById('message').value = ''; // Clears the textarea
+    document.getElementById('emoji').selectedIndex = 0; // Resets to the first option
+
+    // Optionally, you could also reset any checkboxes, radio buttons, or other input types if present
+    // Example: document.getElementById('someCheckbox').checked = false;
+  }
+</script>
+
 
  <!-- JavaScript for Like Button -->
 <script>

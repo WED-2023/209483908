@@ -13,3 +13,4 @@ things you can do in the site that you dont see directly:
 3. press like and unlike to get an emoji reaction
 4. when send is pressed in the contact me section it will open the mail app and fill the sender, text and subject
 5. a small picture as cursor
+6. clear button next to send if we want to re fill the contact form
