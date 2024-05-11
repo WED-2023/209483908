@@ -38,6 +38,11 @@ body {
     font-size: 50px; /* Adjust font size of big letters */
 }
 
+.left-aligned {
+    text-align: left;
+    padding: 10px; /* You can adjust this value as needed */
+}
+
 /* Styles for the menu links */
 #menu a {
     color: #000000; /* Dark gray text color */
