@@ -1,7 +1,9 @@
 /* body background */
 body {
     background-image: url('pictures/background2.jpg');
-    /* Additional background properties */
+    /* Add a margin to the top of the content to account for the fixed menu */
+    margin-top: 50px; /* Adjust this value to match the height of your menu */
+    cursor: url('pictures/cursor.png'), auto;
 }
 /* Styles for the menu container */
 #menu {
@@ -16,10 +18,6 @@ body {
     z-index: 1000; /* Ensure the menu is above other elements */
 }
 
-/* Add a margin to the top of the content to account for the fixed menu */
-body {
-    margin-top: 50px; /* Adjust this value to match the height of your menu */
-}
 
 /* Styles for the about */
 #about td {

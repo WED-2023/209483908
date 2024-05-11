@@ -11,3 +11,4 @@ things you can do in the site that you dont see directly:
 1. quick access by the top bar 
 2. press the pictures to get full screen
 3. press like and unlike to get an emoji reaction
+4. when send is pressed in the contact me section it will open the mail app and fill the sender, text and subject
