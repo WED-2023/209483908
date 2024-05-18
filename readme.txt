@@ -2,7 +2,7 @@ this is my readme, ill give all the info here.
 ID - 209483908
 link to my site - https://wed-2023.github.io/209483908/
 
-about the character:
+About the character:
 Monkey D. Garp is a legendary Vice Admiral in the "One Piece" series, renowned for his immense strength and unique personality.
 He is one of the most powerful figures in the Navy,
 often referred to as "Garp the Hero" for his role in cornering the Pirate King, Gol D. Roger.
@@ -22,3 +22,4 @@ Things to Pay Attention to on the Site:
 7. Custom Cursor: A small picture is used as the cursor.
 8. Clear Contact Form: There's a clear button next to the send button if you want to refill the contact form.
 9. Favicon: The site has a favicon (you can see it in the browser tab).
+10. mouse cursors: Wehn entering the site from a computer there is a picture of garps face as a mouse cursors
